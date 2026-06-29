@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-    </head>
-    <body></body>
-</html>
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TuNombre Studio</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.24/dist/lenis.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="https://unpkg.com/lenis@1.3.24/dist/lenis.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script defer src="js/script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +22,7 @@
     <header class="header">
         <nav class="navbar container">
             <div class="logo">
-                TuNombre Studio
+               RAÍZ
             </div>
 
             <ul class="nav-links">
@@ -44,33 +40,189 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-bg"></div>
-
         <div class="hero-content container fade-in">
 
-            <span class="tag">
-                Diseño que genera impacto
-            </span>
-
             <h1>
-                Construí una marca moderna
-                que conecte con las personas.
+                DEVOLVERLAS A SUS RAÍCES
             </h1>
 
-            <p>
-                Creamos experiencias digitales elegantes,
-                estratégicas y pensadas para crecer.
+            <p class="hero-subtitle">
+                Restauramos muebles con historia para darles una nueva vida en el presente
             </p>
 
-            <div class="hero-buttons">
-                <a href="#contact" class="btn primary">
-                    Empezar ahora
-                </a>
+            <figure class="hero-chair" aria-label="Silla restaurada">
+                <img class="hero-chair-img hero-chair-icon" src="assets/iconofotosilla2.png" alt="Silueta de silla">
+                <img class="hero-chair-img hero-chair-photo" src="assets/sillafoto3.png" alt="Silla restaurada">
+            </figure>
 
-                <a href="#features" class="btn secondary">
-                    Ver más
-                </a>
+            <a href="#features" class="btn primary hero-cta">
+                Ver más
+            </a>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS ANIMADOS -->
+    <section class="scroll-benefits" aria-label="Beneficios destacados">
+
+        <div class="benefits-sticky">
+
+            <svg class="benefits-arc benefits-arc-top" viewBox="0 0 1517 93" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M0 92.0674C528.5 -28.9327 977.5 -32.4328 1516.5 92.0674H0Z" fill="#FEF7E6"></path>
+            </svg>
+
+            <div class="benefits-intro">
+                <h2>RESTAURAR ES<br>VOLVER A EMPEZAR</h2>
+                <p>Vamos a explicarlo simple</p>
             </div>
+
+            <div class="benefits-stage container">
+
+                <article class="benefit-card benefit-card-1">
+                    <div class="benefit-card-head">Nueva vida</div>
+                    <div class="benefit-card-body">
+                        <p>Transformamos piezas en objetos únicos, recuperando su esencia y su valor</p>
+                        <span class="benefit-icon benefit-icon-wave"></span>
+                    </div>
+                </article>
+
+                <article class="benefit-card benefit-card-2">
+                    <div class="benefit-card-head">Identidad fuerte</div>
+                    <div class="benefit-card-body">
+                        <p>Conservamos la esencia y el valor histórico de cada pieza.</p>
+                        <span class="benefit-icon benefit-icon-flower"></span>
+                    </div>
+                </article>
+
+                <article class="benefit-card benefit-card-3">
+                    <div class="benefit-card-head">Sustentabilidad</div>
+                    <div class="benefit-card-body">
+                        <p>Reutilizamos materiales para darles un nuevo propósito</p>
+                        <span class="benefit-icon benefit-icon-leaf"></span>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="benefits-outro" aria-hidden="true">
+                <h2>ANIMATE</h2>
+
+                <svg class="benefits-bubbles" width="1456" height="363" viewBox="0 0 1456 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1142.34" cy="146" r="10.375" fill="#FEF7E6" stroke="#0E0E0E" stroke-width="1.25"></circle>
+                    <circle cx="411.344" cy="105" r="10.375" fill="#FEF7E6" stroke="#0E0E0E" stroke-width="1.25"></circle>
+                    <circle cx="149.344" cy="196" r="10.375" fill="#FEF7E6" stroke="#0E0E0E" stroke-width="1.25"></circle>
+                    <circle cx="649.344" cy="94" r="10.375" fill="#FEF7E6" stroke="#0E0E0E" stroke-width="1.25"></circle>
+                    <circle cx="781.344" cy="32" r="6.375" fill="#FEF7E6" stroke="#0E0E0E" stroke-width="1.25"></circle>
+                    <circle cx="1098.34" cy="76" r="6.375" fill="#FEF7E6" stroke="#0E0E0E" stroke-width="1.25"></circle>
+                    <circle cx="315.344" cy="7" r="6.375" fill="#FEF7E6" stroke="#0E0E0E" stroke-width="1.25"></circle>
+                </svg>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PANEL DE FOTOS -->
+    <section class="photo-panel" aria-label="Panel de inspiración">
+        <div class="photo-panel-grid">
+
+            <article class="photo-tile photo-tile-featured">
+                <span>1.</span>
+                <img src="assets/sillonportal.png" alt="Sillón restaurado">
+            </article>
+
+            <article class="photo-tile photo-tile-lamp">
+                <span>2.</span>
+                <img src="assets/lamparafoto.png" alt="Lámpara restaurada">
+            </article>
+
+            <article class="photo-tile">
+                <span>3.</span>
+                <p>Imagen</p>
+            </article>
+
+            <article class="photo-tile">
+                <span>4.</span>
+                <p>Imagen</p>
+            </article>
+
+            <article class="photo-tile">
+                <span>5.</span>
+                <p>Imagen</p>
+            </article>
+
+            <article class="photo-tile">
+                <span>6.</span>
+                <p>Imagen</p>
+            </article>
+
+            <article class="photo-tile">
+                <span>7.</span>
+                <p>Imagen</p>
+            </article>
+
+            <article class="photo-tile">
+                <span>8.</span>
+                <p>Imagen</p>
+            </article>
+
+            <article class="photo-tile">
+                <span>9.</span>
+                <p>Imagen</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ESCENA INTERACTIVA -->
+    <section class="room-showcase" aria-label="Muebles restaurados en contexto">
+        <div class="room-showcase-inner">
+
+            <button class="room-tag room-tag-chair" type="button" aria-expanded="false">
+                <span class="room-tag-media">
+                    <img src="assets/sillonportal.png" alt="">
+                </span>
+
+                <span class="room-tag-copy">
+                    <strong>Sillas de pino</strong>
+                    <small>Nueva vida</small>
+                </span>
+
+                <span class="room-tag-description">
+                    Estructura reforzada, madera restaurada y asiento retapizado para combinar confort, resistencia y diseño.
+                </span>
+            </button>
+
+            <button class="room-tag room-tag-table" type="button" aria-expanded="false">
+                <span class="room-tag-media room-tag-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <path d="M15 21h34M22 21l-7 30M42 21l7 30M24 35h16" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+
+                <span class="room-tag-copy">
+                    <strong>Mesa de madera</strong>
+                    <small>Terminación natural</small>
+                </span>
+
+                <span class="room-tag-description">
+                    Madera restaurada, lijada a mano y protegida con aceite natural para resaltar la veta
+                </span>
+            </button>
+
+            <button class="room-tag room-tag-lamp" type="button" aria-expanded="false">
+                <span class="room-tag-media">
+                    <img src="assets/lamparafoto.png" alt="">
+                </span>
+
+                <span class="room-tag-copy">
+                    <strong>Lámpara cálida</strong>
+                    <small>Detalle decorativo</small>
+                </span>
+
+                <span class="room-tag-description">
+                    Pantalla restaurada y reacondicionada con terminaciones artesanales para recuperar su carácter original.
+                </span>
+            </button>
+
         </div>
     </section>
 
@@ -193,17 +345,91 @@
 
     </section>
 
+    <!-- AUDIENCIAS / CÍRCULOS EN MOVIMIENTO -->
+    <section class="audience" id="audiences" aria-labelledby="audience-title">
+
+        <div class="audience-sticky">
+
+            <div class="audience-heading">
+                <span>PARA QUIÉN DISEÑAMOS</span>
+                <h2 id="audience-title">Un espacio para<br>cada idea.</h2>
+            </div>
+
+            <div class="orbit orbit-left" aria-hidden="true">
+                <div class="orbit-image" style="--angle:-100deg"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=85" alt=""></div>
+                <div class="orbit-image" style="--angle:-80deg"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=85" alt=""></div>
+                <div class="orbit-image" style="--angle:-60deg"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=85" alt=""></div>
+                <div class="orbit-image" style="--angle:-40deg"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=500&q=85" alt=""></div>
+                <div class="orbit-image" style="--angle:-20deg"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=85" alt=""></div>
+            </div>
+
+            <div class="orbit orbit-right">
+                <article class="orbit-copy" style="--angle:280deg"><div><h3>Empresas</h3><p>Herramientas digitales para trabajar mejor juntos.</p></div></article>
+                <article class="orbit-copy" style="--angle:260deg"><div><h3>Emprendedores</h3><p>Marcas claras y memorables que nacen listas para crecer.</p></div></article>
+                <article class="orbit-copy" style="--angle:240deg"><div><h3>Creativos</h3><p>Portfolios y experiencias que hacen visible tu mejor trabajo.</p></div></article>
+                <article class="orbit-copy" style="--angle:220deg"><div><h3>Profesionales</h3><p>Presencia digital sobria, precisa y con carácter propio.</p></div></article>
+                <article class="orbit-copy" style="--angle:200deg"><div><h3>Y vos</h3><p>Si tenés una idea, podemos encontrar la forma de llevarla a cabo.</p></div></article>
+            </div>
+
+            <div class="orbit-list" hidden>
+
+                <article class="orbit-row">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=85" alt="Equipo reunido trabajando" loading="lazy">
+                    <div>
+                        <h3>Equipos</h3>
+                        <p>Identidad y herramientas digitales para trabajar mejor juntos.</p>
+                    </div>
+                </article>
+
+                <article class="orbit-row">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=85" alt="Emprendedora sonriendo" loading="lazy">
+                    <div>
+                        <h3>Emprendedores</h3>
+                        <p>Marcas claras y memorables que nacen listas para crecer.</p>
+                    </div>
+                </article>
+
+                <article class="orbit-row">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=85" alt="Creativa en retrato" loading="lazy">
+                    <div>
+                        <h3>Creativos</h3>
+                        <p>Portfolios y experiencias que hacen visible tu mejor trabajo.</p>
+                    </div>
+                </article>
+
+                <article class="orbit-row">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=500&q=85" alt="Profesional en retrato" loading="lazy">
+                    <div>
+                        <h3>Profesionales</h3>
+                        <p>Presencia digital sobria, precisa y con carácter propio.</p>
+                    </div>
+                </article>
+
+                <article class="orbit-row">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=85" alt="Persona en retrato" loading="lazy">
+                    <div>
+                        <h3>Y vos</h3>
+                        <p>Si tenés una idea, podemos encontrar la forma de hacerla destacar.</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- CTA -->
     <section class="cta">
 
         <div class="container fade-in">
 
             <h2>
-                ¿Listo para llevar tu marca al siguiente nivel?
+                ¿Tenés un mueble que merece una segunda vida?
             </h2>
 
             <button class="btn primary open-modal">
-                Solicitar propuesta
+                Contactanos
             </button>
 
         </div>
@@ -245,7 +471,7 @@
         <div class="container footer-content">
 
             <div>
-                <h3>TuNombre Studio</h3>
+                <h3>Raíz</h3>
                 <p>Diseño digital con impacto.</p>
             </div>
 
