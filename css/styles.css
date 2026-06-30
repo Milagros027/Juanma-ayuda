@@ -204,8 +204,8 @@ a{
     position:relative;
     z-index:3;
     margin-top:clamp(-22px, -2vw, -8px);
-    background:#C86A3B;
-    color:#fff;
+    background:#FFD16D;
+    color:#101010;
     min-width:138px;
     justify-content:center;
     text-transform:uppercase;
@@ -232,8 +232,8 @@ a{
 }
 
 .primary{
-    background:var(--gradient);
-    color:white;
+    background:#FFD16D;
+    color:#000000;
 }
 
 .secondary{
@@ -524,8 +524,14 @@ section{
 
 .cta{
     text-align:center;
-    background:var(--gradient);
-    color:white;
+    background:#b2e48d;
+    color:#101010;
+}
+
+.cta .btn.primary{
+    background:#FFD16D;
+    color:#101010;
+    box-shadow:0 18px 34px rgba(255, 209, 109, .22);
 }
 
 /* ========================
@@ -579,7 +585,7 @@ textarea{
 ======================== */
 
 footer{
-    background:#0F172A;
+    background:#12611F;
     color:white;
     padding:60px 0;
 }
@@ -863,14 +869,30 @@ footer a{
 ======================== */
 
 .photo-panel{
+    position:relative;
     min-height:100vh;
-    padding:clamp(36px, 5vw, 72px) 0 clamp(80px, 10vw, 140px);
-    background:#FEF7E6;
+    padding:clamp(36px, 5vw, 72px) 0 clamp(170px, 16vw, 260px);
+    background:#FFD16D;
     display:grid;
     place-items:center;
+    overflow:hidden;
+}
+
+.photo-panel::before{
+    content:"";
+    position:absolute;
+    left:-14vw;
+    right:-14vw;
+    top:0;
+    bottom:clamp(36px, 4vw, 64px);
+    background:#FEF7E6;
+    border-radius:0 0 50% 50% / 0 0 16% 16%;
+    z-index:0;
 }
 
 .photo-panel-grid{
+    position:relative;
+    z-index:1;
     width:min(760px, 86vw);
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -949,12 +971,363 @@ footer a{
 }
 
 /* ========================
+   CURSOS
+======================== */
+
+.courses-section{
+    position:relative;
+    margin-top:-1px;
+    padding:clamp(40px, 5vw, 74px) 0 clamp(130px, 12vw, 210px);
+    background:#FFD16D;
+    color:#101010;
+    overflow:hidden;
+}
+
+.courses-container{
+    position:relative;
+    z-index:1;
+    width:min(1240px, calc(100% - 48px));
+    margin:0 auto;
+}
+
+.courses-heading{
+    margin-bottom:clamp(34px, 4vw, 58px);
+}
+
+.courses-heading span{
+    display:block;
+    margin-bottom:10px;
+    color:#1d5b2a;
+    font-size:.82rem;
+    font-weight:800;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+}
+
+.courses-heading h2{
+    max-width:840px;
+    margin:0;
+    color:#fff;
+    font-size:clamp(2.8rem, 5.2vw, 5.15rem);
+    line-height:1.05;
+    letter-spacing:-.075em;
+}
+
+.courses-heading p{
+    max-width:780px;
+    margin:24px 0 0;
+    color:#1f1b17;
+    font-size:clamp(1rem, 1.4vw, 1.28rem);
+    line-height:1.35;
+    font-weight:500;
+}
+
+.courses-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+}
+
+.course-card{
+    min-height:420px;
+    perspective:1400px;
+}
+
+.course-card-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    min-height:420px;
+    transform-style:preserve-3d;
+    transition:transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.course-card:hover .course-card-inner,
+.course-card:focus-within .course-card-inner{
+    transform:rotateY(180deg);
+}
+
+.course-card-face{
+    position:absolute;
+    inset:0;
+    border-radius:24px;
+    padding:20px;
+    overflow:hidden;
+    backface-visibility:hidden;
+    box-shadow:0 22px 52px rgba(79, 48, 12, .18);
+}
+
+.course-card-front{
+    background:#fff;
+    color:#101010;
+    display:flex;
+    flex-direction:column;
+}
+
+.course-card-image{
+    height:198px;
+    margin-bottom:20px;
+    border-radius:18px;
+    background:#F5EFE6;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+}
+
+.course-card-image img{
+    width:84%;
+    height:84%;
+    object-fit:contain;
+    filter:drop-shadow(0 16px 18px rgba(45, 35, 22, .14));
+}
+
+.course-card-image-warm{
+    background:linear-gradient(135deg, #f6e2c8, #f9f4ec);
+}
+
+.course-card-image-green{
+    background:linear-gradient(135deg, #eef3e4, #fff7eb);
+}
+
+.course-card-image-soft{
+    background:linear-gradient(135deg, #f5efe6, #ffffff);
+}
+
+.course-card-front span,
+.course-card-back span{
+    color:#163f25;
+    font-size:.78rem;
+    font-weight:900;
+    letter-spacing:-.02em;
+    text-transform:uppercase;
+}
+
+.course-card-front h3,
+.course-card-back h3{
+    margin:10px 0 0;
+    line-height:.92;
+    letter-spacing:-.08em;
+    text-transform:uppercase;
+}
+
+.course-card-front h3{
+    font-size:clamp(1.2rem, 2vw, 1.75rem);
+    line-height:1;
+    letter-spacing:-.06em;
+}
+
+.course-card-back h3{
+    font-size:clamp(1.85rem, 3vw, 2.75rem);
+}
+
+.course-card-front strong{
+    margin-top:auto;
+    font-size:1.45rem;
+    line-height:1;
+    letter-spacing:-.04em;
+}
+
+.course-card-back{
+    background:#163f25;
+    color:#fff;
+    transform:rotateY(180deg);
+    display:flex;
+    flex-direction:column;
+}
+
+.course-card-back span{
+    color:#b2e48d;
+}
+
+.course-pills{
+    margin-top:24px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:10px;
+}
+
+.course-pills small{
+    min-height:48px;
+    padding:0 10px;
+    border:1px solid rgba(255, 255, 255, .34);
+    border-radius:999px;
+    display:grid;
+    place-items:center;
+    color:#fff;
+    font-size:.72rem;
+    font-weight:800;
+    text-align:center;
+}
+
+.course-card-back p{
+    margin:auto 0 22px;
+    max-width:92%;
+    color:rgba(255, 255, 255, .9);
+    font-size:1rem;
+    line-height:1.35;
+}
+
+.course-card-back a{
+    align-self:flex-start;
+    padding:14px 20px;
+    border-radius:999px;
+    background:#b2e48d;
+    color:#101010;
+    font-size:.76rem;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+/* ========================
+   TESTIMONIOS CURSOS
+======================== */
+
+.course-testimonials{
+    width:100%;
+    min-height:400px;
+    padding:54px 24px 64px;
+    background:#FFD16D;
+    color:#101010;
+    display:grid;
+    place-items:center;
+    align-content:center;
+    gap:30px;
+    overflow:hidden;
+}
+
+.course-testimonial-card{
+    position:relative;
+    width:min(520px, 86vw);
+    min-height:112px;
+    padding:30px 70px 28px 82px;
+    border-radius:28px;
+    background:#FEF7E6;
+    color:#101010;
+    display:grid;
+    align-items:center;
+    transform:translateX(0);
+    opacity:1;
+    box-shadow:0 24px 54px rgba(90, 54, 10, .16);
+    transition:
+        opacity .62s cubic-bezier(.22,1,.36,1),
+        transform .62s cubic-bezier(.22,1,.36,1);
+    will-change:transform, opacity;
+}
+
+.course-testimonial-card.is-changing{
+    opacity:0;
+    transform:translateX(-58px) rotate(-1deg);
+}
+
+.course-testimonial-card.is-entering{
+    opacity:0;
+    transform:translateX(82px) rotate(1deg);
+}
+
+.course-testimonial-pin{
+    position:absolute;
+    top:30px;
+    left:28px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#FFD16D;
+    color:#163f25;
+    display:grid;
+    place-items:center;
+    font-size:.98rem;
+    font-weight:900;
+    box-shadow:inset 0 -3px 0 rgba(22, 63, 37, .12);
+    overflow:hidden;
+}
+
+.course-testimonial-pin img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.course-testimonial-clip{
+    position:absolute;
+    top:-18px;
+    right:44px;
+    width:18px;
+    height:72px;
+    border:3px solid rgba(39, 34, 28, .72);
+    border-radius:999px;
+    transform:rotate(-10deg);
+    transform-origin:50% 0;
+    animation:softClipMove 1.8s ease-in-out infinite;
+}
+
+.course-testimonial-clip::after{
+    content:"";
+    position:absolute;
+    inset:8px 4px;
+    border:2px solid rgba(39, 34, 28, .42);
+    border-radius:999px;
+}
+
+@keyframes softClipMove{
+    0%,
+    100%{
+        transform:rotate(-12deg);
+    }
+
+    50%{
+        transform:rotate(-5deg);
+    }
+}
+
+.course-testimonial-content{
+    display:grid;
+    gap:6px;
+}
+
+.course-testimonial-content p{
+    margin:0;
+    color:#101010;
+    font-size:clamp(1rem, 1.7vw, 1.45rem);
+    line-height:1.05;
+    letter-spacing:-.045em;
+    font-weight:600;
+}
+
+.course-testimonial-content strong{
+    color:#163f25;
+    font-size:.9rem;
+    font-weight:800;
+    letter-spacing:-.02em;
+}
+
+.course-testimonial-dots{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.course-dot{
+    width:11px;
+    height:11px;
+    padding:0;
+    border:2px solid #163f25;
+    border-radius:50%;
+    background:transparent;
+    cursor:pointer;
+}
+
+.course-dot.active{
+    background:#163f25;
+}
+
+/* ========================
    ESCENA INTERACTIVA
 ======================== */
 
 .room-showcase{
     width:100%;
-    padding:clamp(36px, 5vw, 72px) 0;
+    padding:0 0 clamp(36px, 5vw, 72px);
     background:#FEF7E6;
     display:grid;
     place-items:center;
@@ -1197,7 +1570,14 @@ footer a{
 
     .photo-panel{
         min-height:auto;
-        padding:80px 0;
+        padding:80px 0 150px;
+    }
+
+    .photo-panel::before{
+        left:-34vw;
+        right:-34vw;
+        bottom:34px;
+        border-radius:0 0 50% 50% / 0 0 9% 9%;
     }
 
     .photo-panel-grid{
@@ -1210,8 +1590,69 @@ footer a{
         border-radius:14px;
     }
 
+    .courses-section{
+        padding:42px 0 130px;
+    }
+
+    .courses-container{
+        width:min(420px, calc(100% - 32px));
+    }
+
+    .courses-heading h2{
+        font-size:clamp(2.45rem, 11vw, 3.8rem);
+        line-height:1.02;
+    }
+
+    .courses-heading p{
+        font-size:1rem;
+    }
+
+    .courses-grid{
+        grid-template-columns:1fr;
+    }
+
+    .course-card,
+    .course-card-inner{
+        min-height:430px;
+    }
+
+    .course-card-face{
+        border-radius:20px;
+    }
+
+    .course-testimonials{
+        min-height:360px;
+        padding:46px 18px 54px;
+        gap:18px;
+    }
+
+    .course-testimonial-card{
+        width:min(360px, 88vw);
+        min-height:108px;
+        padding:28px 54px 24px 68px;
+        border-radius:22px;
+    }
+
+    .course-testimonial-pin{
+        top:28px;
+        left:22px;
+        width:32px;
+        height:32px;
+        font-size:.9rem;
+    }
+
+    .course-testimonial-clip{
+        right:30px;
+        height:62px;
+    }
+
+    .course-testimonial-content p{
+        font-size:clamp(.98rem, 4.4vw, 1.2rem);
+        line-height:1.08;
+    }
+
     .room-showcase{
-        padding:54px 0;
+        padding:0 0 54px;
     }
 
     .room-showcase-inner{
@@ -1247,4 +1688,5 @@ footer a{
         right:auto;
         top:14%;
     }
+
 }

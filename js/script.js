@@ -104,6 +104,110 @@ roomTags.forEach((tag) => {
 });
 
 // =========================
+// TESTIMONIOS DE CURSOS
+// =========================
+
+const courseTestimonials = [
+    {
+        text:"Aprendí que restaurar no era solamente lijar, sino diseñar.",
+        name:"@martina",
+        avatar:"assets/avatar-martina.svg",
+        avatarAlt:"Martina"
+    },
+    {
+        text:"Me animé a intervenir un mueble familiar y quedó mejor de lo que imaginaba.",
+        name:"@tomas",
+        avatar:"assets/avatar-tomas.svg",
+        avatarAlt:"Tomás"
+    },
+    {
+        text:"El curso me dio técnica, criterio y confianza para empezar mis propios proyectos.",
+        name:"@lucia",
+        avatar:"assets/avatar-lucia.svg",
+        avatarAlt:"Lucía"
+    }
+];
+
+const courseTestimonialCard =
+document.querySelector(".course-testimonial-card");
+
+const courseTestimonialText =
+document.querySelector("#courseTestimonialText");
+
+const courseTestimonialName =
+document.querySelector("#courseTestimonialName");
+
+const courseTestimonialAvatar =
+document.querySelector("#courseTestimonialAvatar");
+
+const courseDots =
+document.querySelectorAll(".course-dot");
+
+let currentCourseTestimonial = 0;
+let courseTestimonialTimer;
+
+const showCourseTestimonial = (index) => {
+
+    if (!courseTestimonialCard) return;
+
+    currentCourseTestimonial =
+    (index + courseTestimonials.length) % courseTestimonials.length;
+
+    courseTestimonialCard.classList.add("is-changing");
+
+    window.setTimeout(() => {
+
+        const testimonial =
+        courseTestimonials[currentCourseTestimonial];
+
+        courseTestimonialText.textContent = testimonial.text;
+        courseTestimonialName.textContent = testimonial.name;
+        courseTestimonialAvatar.src = testimonial.avatar;
+        courseTestimonialAvatar.alt = testimonial.avatarAlt;
+
+        courseDots.forEach((dot, dotIndex) => {
+            dot.classList.toggle(
+                "active",
+                dotIndex === currentCourseTestimonial
+            );
+        });
+
+        courseTestimonialCard.classList.remove("is-changing");
+        courseTestimonialCard.classList.add("is-entering");
+
+        requestAnimationFrame(() => {
+            courseTestimonialCard.classList.remove("is-entering");
+        });
+
+    }, 460);
+
+};
+
+const startCourseTestimonials = () => {
+
+    if (!courseTestimonialCard) return;
+
+    window.clearInterval(courseTestimonialTimer);
+
+    courseTestimonialTimer =
+    window.setInterval(() => {
+        showCourseTestimonial(currentCourseTestimonial + 1);
+    }, 5200);
+
+};
+
+courseDots.forEach((dot) => {
+
+    dot.addEventListener("click", () => {
+        showCourseTestimonial(Number(dot.dataset.courseTestimonial));
+        startCourseTestimonials();
+    });
+
+});
+
+startCourseTestimonials();
+
+// =========================
 // FADE IN ON SCROLL
 // =========================
 
