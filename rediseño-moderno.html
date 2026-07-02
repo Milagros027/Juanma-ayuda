@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rediseño Moderno | RAÍZ</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.24/dist/lenis.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="https://unpkg.com/lenis@1.3.24/dist/lenis.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script defer src="js/script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar container">
+            <a class="logo" href="index.html">
+                RAÍZ
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#features">Beneficios</a></li>
+                <li><a href="index.html#process">Proceso</a></li>
+                <li><a href="index.html#reviews">Opiniones</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+
+            <button class="hamburger">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <!-- DETALLE DEL CURSO -->
+    <main class="course-detail">
+
+        <section class="course-detail-hero">
+            <div class="course-detail-hero-inner container fade-in">
+
+                <div class="course-detail-copy">
+                    <span>Curso avanzado</span>
+                    <h1>Rediseño moderno</h1>
+                    <p>
+                        Aprendé a transformar una pieza existente en un mueble actual, funcional y con identidad propia.
+                    </p>
+
+                    <div class="course-detail-actions">
+                        <button class="btn primary open-modal detail-action course-enroll-btn">
+                            <span class="circle1"></span>
+                            <span class="circle2"></span>
+                            <span class="circle3"></span>
+                            <span class="circle4"></span>
+                            <span class="circle5"></span>
+                            <span class="text">Inscribirme</span>
+                        </button>
+
+                        <a class="btn secondary" href="index.html">
+                            Volver al inicio
+                        </a>
+                    </div>
+                </div>
+
+                <figure class="course-detail-visual">
+                    <img src="assets/sillafoto3.png" alt="Silla restaurada para curso de rediseño moderno">
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="course-detail-info">
+            <div class="container course-detail-grid">
+
+                <article>
+                    <small>Duración</small>
+                    <strong>5 clases</strong>
+                </article>
+
+                <article>
+                    <small>Modalidad</small>
+                    <strong>Presencial</strong>
+                </article>
+
+                <article>
+                    <small>Nivel</small>
+                    <strong>Avanzado</strong>
+                </article>
+
+                <article>
+                    <small>Valor</small>
+                    <strong>$95.000</strong>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="course-detail-content container">
+
+            <div class="course-detail-section fade-in">
+                <span>Sobre el curso</span>
+                <h2>Diseñar una nueva vida para una pieza con historia</h2>
+                <p>
+                    Este curso está pensado para quienes quieren ir más allá de la restauración básica. Vas a trabajar criterio estético, selección de materiales, color, terminaciones y composición para que cada mueble se sienta contemporáneo sin perder su esencia.
+                </p>
+            </div>
+
+            <div class="course-detail-modules">
+
+                <article class="fade-in">
+                    <span>01</span>
+                    <h3>Lectura de la pieza</h3>
+                    <p>Analizamos estructura, proporciones, estado general y posibilidades reales de rediseño.</p>
+                </article>
+
+                <article class="fade-in">
+                    <span>02</span>
+                    <h3>Propuesta estética</h3>
+                    <p>Definimos paleta, materiales, textura y estilo para construir una dirección visual clara.</p>
+                </article>
+
+                <article class="fade-in">
+                    <span>03</span>
+                    <h3>Intervención y acabado</h3>
+                    <p>Aplicamos técnicas de restauración, color y protección para lograr una terminación profesional.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="course-detail-cta">
+            <div class="container fade-in">
+                <h2>¿Querés rediseñar una pieza con tus propias manos?</h2>
+                <button class="btn primary open-modal detail-action course-enroll-btn">
+                    <span class="circle1"></span>
+                    <span class="circle2"></span>
+                    <span class="circle3"></span>
+                    <span class="circle4"></span>
+                    <span class="circle5"></span>
+                    <span class="text">Reservar mi lugar</span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-modal">
+                ×
+            </button>
+
+            <h3>Solicitá información</h3>
+
+            <form>
+
+                <input type="text" placeholder="Nombre">
+
+                <input type="email" placeholder="Email">
+
+                <textarea placeholder="Contanos tu proyecto"></textarea>
+
+                <button class="btn primary">
+                    Enviar
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contact">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+                <h3>RAÍZ</h3>
+                <p>
+                    Restauración de muebles, formación online y futuras piezas cápsula con mirada contemporánea.
+                </p>
+
+                <a class="footer-top-link" href="index.html#home">
+                    Volver al inicio
+                    <span>↑</span>
+                </a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Secciones</h4>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#beneficios-animados">Beneficios</a>
+                <a href="index.html#capsula">Cápsula</a>
+                <a href="index.html#courses">Cursos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4>Contacto</h4>
+                <a href="mailto:hola@raizrestaura.com">soy@raizrestaura.com</a>
+                <p>Buenos Aires, Argentina</p>
+
+                <div class="footer-divider"></div>
+
+                <h4>Redes</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+            </div>
+
+            <div class="footer-column footer-workshop">
+                <h4>El taller</h4>
+
+                <a class="footer-map" href="https://www.google.com/maps" target="_blank" rel="noopener" aria-label="Ver ubicación del taller en Google Maps">
+                    <span class="footer-map-pin"></span>
+                    <span class="footer-map-label">RAÍZ Taller</span>
+                </a>
+
+                <a class="footer-map-link" href="https://www.google.com/maps" target="_blank" rel="noopener">
+                    Ver en Google Maps ↗
+                </a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 RAÍZ. Todos los derechos reservados.</p>
+            <p>Restauración de muebles y academia online</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

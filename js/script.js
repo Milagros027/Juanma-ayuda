@@ -365,6 +365,18 @@ if (audience) {
             "--orbit-text-opacity",
             Math.min(1, Math.max(0, (progress - .10) / .12))
         );
+        audience.style.setProperty(
+            "--audience-heading-opacity",
+            Math.max(0, 1 - progress * 3.2)
+        );
+        audience.style.setProperty(
+            "--bubble-rise",
+            `${progress * -180}px`
+        );
+        audience.style.setProperty(
+            "--bubble-opacity",
+            Math.max(0, 1 - progress * 1.35)
+        );
         animationFrame = undefined;
     };
 
